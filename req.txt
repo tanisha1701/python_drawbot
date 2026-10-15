@@ -1,0 +1,16 @@
+# Laptop-side packages for draw_bot.py
+# Install with:  pip install -r req.txt
+#
+# Also needed (not a pip package): hand_landmarker.task in the same folder as
+# draw_bot.py. Copy it from your old rc_car_controller project.
+#
+# IMPORTANT (Mac): mediapipe 1.x aborts on macOS while loading the hand model
+# ("graph_service.h Check failed: service_ Service is unavailable").
+# 0.10.35 is the last 0.10 release and runs cleanly on Apple Silicon.
+#
+# opencv-contrib-python is listed instead of opencv-python because mediapipe
+# installs it anyway, and having both puts two copies of cv2 in one environment.
+
+numpy>=1.24.0
+mediapipe==0.10.35
+opencv-contrib-python>=4.8.0
